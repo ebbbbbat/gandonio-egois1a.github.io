@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(45deg, #1a1a1a, #a31919);
+    background-size: 200% 200%;
+    animation: gradientBG 5s linear infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.navbar {
+    background: #0f0000;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background: #575757;
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+.contact {
+    padding: 50px 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label, .contact input, .contact textarea {
+    margin-bottom: 10px;
+}
+
+.download-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #a31919;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.download-button:hover {
+    background-color: #b50000;
+}
+
+
+.footer {
+    background-color: #0f0000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+}

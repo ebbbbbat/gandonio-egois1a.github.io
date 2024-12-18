@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио</title>
+    <link rel="stylesheet" href="C:\Users\8\Desktop\сайты\портцсс.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+
+  <header>
+    <div id="language-switcher">
+      <button class="language-button" data-lang="kz">Қаз</button>
+      <button class="language-button" data-lang="ru">Рус</button>
+      <button class="language-button" data-lang="en">EN</button>
+    </div>
+  </header>
+<main>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" data-lang-kz="Басты бет" data-lang-ru="Главная" data-lang-en="Main">Главная</a></li>
+            <li><a href="#projects" data-lang-kz="Жобалар" data-lang-ru="Проекты" data-lang-en="Projects">Проекты</a></li>
+            <li><a href="#about" data-lang-kz="Біз туралы" data-lang-ru="О нас" data-lang-en="About us">О нас</a></li>
+            <li><a href="file:///C:/Users/8/Desktop/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/%D0%BB%D0%BE%D0%B3%D0%BE.html" data-lang-kz="Құралдар мен технологиялар" data-lang-ru="Инструменты и технологии" data-lang-en="Tools and technologies">Инструменты и технологии</a></li>
+            <li><a href="file:///C:/Users/8/Desktop/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.html" data-lang-kz="Дағдылар" data-lang-ru="Навыки" data-lang-en="Skills">Навыки</a></li>
+            <li><a href="file:///C:/Users/8/Desktop/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/%D0%B8%D0%BD%D1%82%D1%8C%D0%B5%D1%80%D0%B5%D1%81%D1%8B.html" data-lang-kz="Мүдделер" data-lang-ru="Интересы" data-lang-en="Interests">Интересы</a></li>
+
+             <br>
+<button id="toggle-theme" style="position: fixed; top: 20px; right: 20px; padding: 10px; cursor: pointer; background-color: #2c2c2c; color: #fff; border: none; border-radius: 5px;" data-lang-kz="Тақырыпты өзгерту" data-lang-ru="Сменить тему" data-lang-en="Change the subject">Сменить тему</button>
+
+<!-- Скрипт для смены темы -->
+<script>
+  // Проверка локального хранилища для сохранения темы
+  document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.add(theme);
+  });
+
+  document.getElementById('toggle-theme').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+
+    // Сохраняем текущую тему в локальное хранилище
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+   <!-- Скрипт для смены темы -->
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.body.classList.add(theme);
+    });
+
+    document.getElementById('toggle-theme').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        document.body.classList.toggle('light');
+
+        if (document.body.classList.contains('dark')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+
+<!-- Скрипт для смены языка -->
+<script>
+    document.getElementById('change-language').addEventListener('click', () => {
+        const currentLanguage = document.documentElement.lang;
+        if (currentLanguage === 'ru') {
+            document.documentElement.lang = 'en';
+            document.getElementById('home-title').innerHTML = 'Welcome to our page';
+            document.getElementById('home-description').innerHTML = 'Hello! We are a team of digital and web designers - treekota, our names are Diana, Vika, and Nastya. Our main activity is creating visual arts that effectively design websites, applications, and platforms at an intuitive level with taste. Here, you can learn about us, view our projects, and get in touch with our team.';
+            document.getElementById('about-title').innerHTML = 'About us';
+            document.getElementById('about-text').innerHTML = 'Our goal is to give your idea the best realization. We specialize in different platforms that are convenient for our clients. We offer our services as professional specialists, meeting all deadlines on time. If you need help presenting your business, we would be happy to help you.';
+            document.getElementById('about-details').innerHTML = 'More details, we create: Social media visuals, infographics, print design, guides, presentations, branding, checklists, logo design, website layouts, and banners.';
+            document.getElementById('about-additional').innerHTML = 'We also provide: Friendly communication, initiative, responsibility, independence, adaptability.';
+        } else {
+            // Добавьте перевод на другие языки (например, казахский)
+            alert('Currently, switching to English is supported.');
+        }
+    });
+</script>
+
+        </ul>
+    </nav>
+   
+    
+
+    <section id="home" class="section">
+        <h1 data-lang-kz="Біздің бетке қош келдіңіз" data-lang-ru="Добро пожаловать на нашу страницу" data-lang-en="Welcome to our page">Добро пожаловать на нашу страницу</h1>
+
+        
+<section class="section">
+    <p data-lang-kz="Сәлем! Біз djital және веб-дизайнерлер тобымыз-Treekota, біздің атымыз Диана, Вика және Настя. Біздің негізгі қызметіміз-сайттарды, қосымшаларды және сайттарды интуитивті деңгейде талғаммен безендіруді тиімді жүзеге асыратын визуалды зергерлік бұйымдарды жасау. Мұнда сіз біз туралы біле аласыз, жобаларымызды көре аласыз және біздің командамен байланыса аласыз." data-lang-ru="Привет! Мы команда диджитал и веб-дизайнеров - treekota, нас зовут Диана, Вика и Настя. Наша основная деятельность создание визуального исскутва, эффективно выполняющие оформление сайтов, приложений и площадок на интуитивно понятном уровне со вкусом. Здесь Вы можете узнать о нас, посмотреть наши проекты и связаться с нашей командой." data-lang-en="Hi! We are a team of digital and web designers - treekota, our names are Diana, Vika and Nastya. Our main activity is the creation of visual art, effectively performing the design of websites, applications and sites on an intuitive level with taste. Here you can find out about us, view our projects and contact our team.">Привет! Мы команда диджитал и веб-дизайнеров - treekota, нас зовут Диана, Вика и Настя. Наша основная деятельность создание визуального исскутва, эффективно выполняющие оформление сайтов, приложений и площадок на интуитивно понятном уровне со вкусом. Здесь Вы можете узнать о нас, посмотреть наши проекты и связаться с нашей командой.</p>
+    <img src="C:\Users\8\Pictures\06ba2df1-a87e-488c-946e-4a5dc807e88a.jpg" alt="1" width="200" heiht="200">
+    <img src="C:\Users\8\Pictures\7895e3e6-9fb0-4ca9-bea2-6e92daf2f135.jpg" alt="2" width="200" heiht="200">
+    <img src="C:\Users\8\Pictures\4100070e-6611-4e62-901f-39d9b8c94f95.jpg" alt="3" width="200" heiht="200">
+
+  </section>
+  </section>
+  
+  <section class="section">
+    <section id="about" class="section">
+        <h2 data-lang-kz="Өзі туралы" data-lang-ru="О себе" data-lang-en="About us">О себе</h2>
+        <p data-lang-kz="Біздің мақсатымыз-сіздің идеяңызды жақсы іске асыру. Біз өз клиенттерімізге ыңғайлы әртүрлі платформаларға маманданамыз. Біз барлық мерзімдерді уақытында орындай отырып, кәсіби мамандар ретінде қызмет көрсетеміз. Егер сіздің бизнесіңізді сауатты көрсету үшін сізге көмек қажет болса, біз сізге көмектесуге қуаныштымыз." data-lang-ru="Наша цель дать Вашей идее лучшую реализацию. Специализируемся на различных платформах, удобных для наших клиентов. Предлагаем наши услуги в качестве профессиональных специалистов, выполняя все дедлайны в сроки. Если вам требуется помощь для грамотного представления вашего бизнеса, мы будем рады вам помочь." data-lang-en="Our goal is to give your idea the best implementation. We specialize in various platforms that are convenient for our customers. We offer our services as professional specialists, fulfilling all deadlines on time. If you need help to present your business correctly, we will be happy to help you.">Наша цель дать Вашей идее лучшую реализацию. Специализируемся на различных платформах, удобных для наших клиентов. Предлагаем наши услуги в качестве профессиональных специалистов, выполняя все дедлайны в сроки. Если вам требуется помощь для грамотного представления вашего бизнеса, мы будем рады вам помочь.</p>
+    <br>
+    <p data-lang-kz="Толығырақ, біз жасаймыз: әлеуметтік визуалды дизайн. желілер, инфографика, полиграфия дизайны, нұсқаулықтар, презентациялар, сәйкестендіру, тексеру парақтары, логотиптер жасау, сайттар мен баннерлердің макеттері." data-lang-ru="Более подробно, мы создаем: Оформление визуала соц. сетей, инфографика, дизайн полиграфии, гайды, презентации, айдентика, чек-листы, создание логотипов, макеты сайтов и баннеров." data-lang-en="In more detail, we create: Visual design of social networks, infographics, graphic design, guides, presentations, identity, checklists, logo creation, website layouts and banners.">Более подробно, мы создаем: Оформление визуала соц. сетей, инфографика, дизайн полиграфии, гайды, презентации, айдентика, чек-листы, создание логотипов, макеты сайтов и баннеров.</p>
+   <br>
+   <p data-lang-kz="Біз сондай-ақ өзімізден: достық қарым-қатынас, бастамашылық, жауапкершілік, Тәуелсіздік, бейімделу." data-lang-ru="Так же от себя предоставляем: Дружелюбную коммуникацию, инициативность, ответственность, самостоятельность, адаптивность." data-lang-en="We also provide on our own: Friendly communication, initiative, responsibility, independence, adaptability.">Так же от себя предоставляем: Дружелюбную коммуникацию, инициативность, ответственность, самостоятельность, адаптивность.</p>
+</section>
+</section>  
+
+
+<section class="section">
+    <section id="projects" class="section">
+        <h2><a href ="C:\Users\8\Desktop\сайты\сайтикиииит.html" data-lang-kz="Жобалар" data-lang-ru="Проекты" data-lang-en="Projects">Проекты</a></h2>
+        <div class="slider">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <div class="slides"> 
+                <img src="C:\Users\8\Pictures\Screenshots\Снимок экрана 2024-12-02 084249.png" alt="Проект 1">
+                <img src="C:\Users\8\Pictures\Screenshots\Снимок экрана 2024-11-29 093720.png" alt="Проект 1">
+                <img src="C:\Users\8\Pictures\Screenshots\Снимок экрана 2024-11-29 090629.png" alt="Проект 2">
+                <img src="C:\Users\8\Pictures\Screenshots\Снимок экрана 2024-11-29 082001.png" alt="Проект 3">
+                <img src="C:\Users\8\Pictures\Screenshots\Снимок экрана 2024-11-29 083220.png" alt="Проект 3">
+                <img src="C:\Users\8\Pictures\Screenshots\Снимок экрана 2024-11-29 084824.png">
+            </div>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        </section>
+  </section>
+
+<section class="section">
+<section id="contacts" class="section">
+    <h2 data-lang-kz="Байланыс" data-lang-ru="Контакты" data-lang-en="Contacts">Контакты</h2>
+    <p>Email: example@example.com</p>
+    <p data-lang-kz="Телефон: +7 (123) 456-78-90" data-lang-ru="Телефон: +7 (123) 456-78-90" data-lang-en="Number: +7 (123) 456-78-90">Телефон: +7 (123) 456-78-90</p>
+    <p>LinkedIn: <a href="https://linkedin.com" target="_blank" data-lang-kz="Біздің профильдер" data-lang-ru="Наши профили" data-lang-en="Our profiles">Наши профили</a></p>
+</section>
+<section class="contact">
+    <h2 data-lang-kz="Бізбен хабарласыңыз" data-lang-ru="Связаться с нами" data-lang-en="Contact us">Связаться с нами</h2>
+    <form action="send-message.php" method="post">
+        <label for="name" data-lang-kz="Аты:" data-lang-ru="Имя:" data-lang-en="Name:">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message" data-lang-kz="Хабар:" data-lang-ru="Сообщение:" data-lang-en="Message:">Сообщение:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" data-lang-kz="Жіберу" data-lang-ru="Отправить" data-lang-en="Send">Отправить</button>
+    </form>
+</section>
+</section>
+
+  <script>
+  // Инициализация Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Добавляем класс для анимации
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Прекратить наблюдение после появления
+    }
+  });
+}, { threshold: 0.2 }); // Запуск анимации, когда 20% элемента становится видимым
+
+// Наблюдаем за всеми элементами с классом .section
+document.querySelectorAll('.section').forEach(section => {
+  observer.observe(section);
+});
+</script>
+<style>
+    /* Стиль для каждого раздела */
+.section {
+  opacity: 0; /* Элементы скрыты по умолчанию */
+  transform: translateY(20px); /* Сдвиг вниз для эффекта */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Ключевые кадры для плавного появления */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Начальная позиция */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Конечная позиция */
+  }
+}
+
+/* Применение анимации, когда элемент становится видимым */
+.section.visible {
+  animation: fadeIn 0.8s ease-out forwards; /* Плавное появление */
+}
+</style>
+
+    <style type="text/css">
+		dialog {
+			margin: auto;
+ 			position: absolute;
+  		top: 0; left: 0; bottom: 0; right: 0;		  background: lightblue;
+		  border: none;
+		  border-radius: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<button id="open" data-lang-kz="Деректер түрлері туралы" data-lang-ru="Про типы данных" data-lang-en="About data types">Про типы данных</button>
+    <dialog>
+      <p data-lang-kz="Сіз JavaScript-ті үйрене бастағанда, алдымен эйфорияны сезінесіз: айнымалылармен жұмыс істеу өте оңай, түрлерге назар аударудың қажеті жоқ, оны жай ғана атаңыз және қолданыңыз. Бірақ үлкен еркіндікпен үлкен жауапкершілік келеді. Егер сіз осы тілді енді ғана қолдана бастасаңыз, деректер түрлерімен нюанстарға назар аударыңыз." data-lang-ru="Когда начинаешь изучать JavaScript, сначала чувствуешь эйфорию: очень легко работать с переменными, не нужно следить за типами, просто назвал и пользуешься. Но с великой свободой приходит великая ответственность. Если вы только начинаете пользоваться этим языком, обратите внимание на нюанс с типами данных." data-lang-en="When you start learning JavaScript, you first feel euphoria: it's very easy to work with variables, you don't need to keep track of types, you just named them and use them. But with great freedom comes great responsibility. If you are just starting to use this language, pay attention to the nuance with data types.">
+        Когда начинаешь изучать JavaScript, сначала чувствуешь эйфорию: очень легко работать с переменными, не нужно следить за типами, просто назвал и пользуешься. Но с великой свободой приходит великая ответственность. Если вы только начинаете пользоваться этим языком, обратите внимание на нюанс с типами данных.
+
+      </p>
+      <p>
+   			<button id="close" data-lang-kz="Терезені жабу" data-lang-ru="Закрыть окно" data-lang-en="Close the window">Закрыть окно</button>
+  		</p>
+    </dialog>
+    <script>
+      var dialog = document.querySelector('dialog')
+      // выводим модальное окно
+      document.querySelector('#open').onclick = function () {
+        dialog.showModal()
+      }
+      // скрываем окно
+      document.querySelector('#close').onclick = function () {
+        dialog.close() 
+      }
+    </script>
+
+    <a href="file:///C:/Users/8/Downloads/%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D1%83%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%BF%D0%BE%D1%80%D1%82%D1%84%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D0%B5%D1%80%D0%B0.pdf" download class="download-button" data-lang-kz="Түйіндемені жүктеу" data-lang-ru="Скачать резюме" data-lang-en="Download a resume">Скачать резюме</a>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="C:\Users\8\Desktop\сайты\ррррр.js"></script>
+    <footer class="footer">
+        <li><a href="#home" data-lang-kz="Басты бет" data-lang-ru="Главная" data-lang-en="Main">Главная</a></li>
+        <p data-lang-kz="&copy; 2024 treekota. Барлық құқықтар қорғалған." data-lang-ru="&copy; 2024 treekota. Все права защищены." data-lang-en="&copy; 2024 treekota. All rights reserved.">&copy; 2024 treekota. Все права защищены.</p>
+    </footer>
+<style>
+    /* Общие стили для всего сайта */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Очень темный фон */
+    color: #e0e0e0; /* Светлый текст */
+    line-height: 1.6;
+}
+
+/* Основной контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для шапки */
+header {
+    background-color: #1c1c1c; /* Темный фон для шапки */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Навигационное меню */
+nav {
+    background-color: #2c2c2c; /* Чуть светлее темного фона */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0; /* Светлый текст */
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #561a26; /* Холодный акцент */
+    border-bottom: 2px solid #692734; /* Подсветка при наведении */
+}
+
+/* Стили секций */
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #e3ebf2 ; /* Холодный акцент */
+    border-bottom: 2px solid #e3ebf2;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Стили карточек проекта */
+.card {
+    background-color: #1c1c1c; /* Темный фон карточек */
+    border: 1px solid #333; /* Легкая рамка */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Светлый текст */
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #b0b0b0; /* Светло-серый текст */
+}
+
+/* Стили футера */
+footer {
+    background-color: #1c1c1c; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+}
+/* Стиль для темной темы */
+
+
+body.dark .navbar, body.dark .footer {
+  background-color: #1c1c1c; /* Темный фон для шапки и футера */
+}
+
+
+
+/* Дополнительные стили для элементов, которые должны быть контрастными */
+body.dark a {
+  color: #ffffff; /* Светло-синий для ссылок */
+}
+
+/* Стиль для светлой темы */
+body.light {
+  background-color: #ddddd8; /* Светлый фон */
+  color: #000000; /* Темный текст */
+}
+
+body.light .navbar, body.light .footer {
+  background-color: #ddddd8; /* Светлый фон для шапки и футера */
+}
+
+body.light .section {
+  background-color: #ddddd8; /* Светлый фон для секций */
+  color: #000000; /* Темный текст */
+}
+
+/* Дополнительные стили для элементов, которые должны быть контрастными */
+body.light a {
+  color: #561a26; /* Синий для ссылок */
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+}
+
+
+</style>
+    <script src="порт.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup on Hover</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Кнопка для открытия всплывающего окна */
+        .open-popup-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #0f0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            z-index: 1001;
+            transition: background-color 0.3s;
+        }
+
+        .open-popup-btn:hover {
+            background-color: #561a26;
+        }
+
+        /* Стили для всплывающего окна */
+        .popup {
+            position: fixed;
+            bottom: 60px; /* Немного выше кнопки */
+            right: 20px;
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            display: none; /* Скрыто по умолчанию */
+            z-index: 1000;
+        }
+
+        /* Отображение окна при наведении на кнопку */
+        .open-popup-btn:hover + .popup {
+            display: block;
+        }
+
+        /* Кнопка закрытия */
+        .popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .popup .close-btn:hover {
+            color: #ff0000; /* Подсветка при наведении */
+        }
+    </style>
+        </main>
+        <script src="script.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+
